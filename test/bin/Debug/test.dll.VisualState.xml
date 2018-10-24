@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1015]D:\projects\bin\ThreeDimensionalBinTimePacking(Structured)\test\bin\Debug\test.dll</TopNode>
+  <SelectedNode>[0-1015]D:\projects\bin\ThreeDimensionalBinTimePacking(Structured)\test\bin\Debug\test.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1015]D:\projects\bin\ThreeDimensionalBinTimePacking(Structured)\test\bin\Debug\test.dll" Expanded="true" />
+    <Node UniqueName="[0-1016]ThreeDimensionalBinTimePacking" Expanded="true" />
+    <Node UniqueName="[0-1017]ThreeDimensionalBinTimePacking.Test" Expanded="true" />
+    <Node UniqueName="[0-1021]ThreeDimensionalBinTimePacking.Test.Algorithm" Expanded="true" />
+    <Node UniqueName="[0-1010]ThreeDimensionalBinTimePacking.Test.Algorithm.AlgorithmTesting" Expanded="true" />
+    <Node UniqueName="[0-1020]ThreeDimensionalBinTimePacking.Test.ContainersScchedulingTester" Expanded="true" />
+    <Node UniqueName="[0-1006]ThreeDimensionalBinTimePacking.Test.ContainersScchedulingTester.ContainersScchedulingTesting" Expanded="true" />
+    <Node UniqueName="[0-1018]ThreeDimensionalBinTimePacking.Test.Data" Expanded="true" />
+    <Node UniqueName="[0-1000]ThreeDimensionalBinTimePacking.Test.Data.DataTesting" Expanded="true" />
+    <Node UniqueName="[0-1019]ThreeDimensionalBinTimePacking.Test.GeneticTest" Expanded="true" />
+    <Node UniqueName="[0-1004]ThreeDimensionalBinTimePacking.Test.GeneticTest.GeneticTesting" Expanded="true" />
+    <Node UniqueName="[0-1022]ThreeDimensionalBinTimePacking.Test.OverAll" Expanded="true" />
+    <Node UniqueName="[0-1013]ThreeDimensionalBinTimePacking.Test.OverAll.OverAll" Expanded="true" />
+  </Nodes>
+</VisualState>

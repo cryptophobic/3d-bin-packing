@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ThreeDimensionalBinTimePacking">
+</Property><Property Name="Solution File" Value="D:\temp\projects\bin\ThreeDimensionalBinTimePacking(Structured)\ThreeDimensionalBinTimePacking.sln">
+</Property><Property Name="Date" Value="15 ноября 2011 г.">
+</Property><Property Name="Time" Value="18:35">
+</Property></Properties><Event ErrorLevel="0" Project="PackingService" Source="PackingService\PackingService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PackingService" Source="PackingService\PackingService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="packingConsole" Source="packingConsole\packingConsole.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="packingConsole" Source="packingConsole\packingConsole.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="webServiceTester" Source="webServiceTester\webServiceTester.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="webServiceTester" Source="webServiceTester\webServiceTester.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ConsoleTester" Source="ConsoleTester\ConsoleTester.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ConsoleTester" Source="ConsoleTester\ConsoleTester.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SinglePack" Source="3DSingleBinPackFixedOrientation\SinglePack.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SinglePack" Source="3DSingleBinPackFixedOrientation\SinglePack.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Logger" Source="Logger\Logger.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DataTypes" Source="DataTypes\DataTypes.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DataTypes" Source="DataTypes\DataTypes.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Genetic" Source="GeneticAlgorithmOfPack\Genetic.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Genetic" Source="GeneticAlgorithmOfPack\Genetic.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Controller" Source="Controller\Controller.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Controller" Source="Controller\Controller.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="test" Source="test\test.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="test" Source="test\test.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ThreeDimensionalBinTimePacking.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ThreeDimensionalBinTimePacking.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PackingService" Source="PackingService\PackingService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="webServiceTester" Source="webServiceTester\webServiceTester.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="ConsoleTester" Source="ConsoleTester\ConsoleTester.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SinglePack" Source="3DSingleBinPackFixedOrientation\SinglePack.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="DataTypes" Source="DataTypes\DataTypes.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Genetic" Source="GeneticAlgorithmOfPack\Genetic.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Controller" Source="Controller\Controller.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="packingConsole" Source="packingConsole\packingConsole.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="test" Source="test\test.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

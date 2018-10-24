@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{C55C310A-2896-4D02-8F16-0044FB7FB852}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "classLibrary", "classLibrary", "{6BA2837C-182D-4126-8000-BC2C34D51990}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{321FE38B-65EE-40E4-ACEA-F7EF3D7C20CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B840DA20-5A7B-4190-9F9B-4B971424DC93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E1D5A51B-0306-468C-B750-567EA26A6A74}"
+	ProjectSection(SolutionItems) = preProject
+		docs\3DSingleBinPackFixedOrientation.XML = docs\3DSingleBinPackFixedOrientation.XML
+		docs\Controller.XML = docs\Controller.XML
+		docs\DataTypes.XML = docs\DataTypes.XML
+		docs\Documentation.xsl = docs\Documentation.xsl
+		docs\GeneticAlgorithmOfPack.XML = docs\GeneticAlgorithmOfPack.XML
+		docs\Logger.XML = docs\Logger.XML
+		docs\Three dimensional bin packing.pdf = docs\Three dimensional bin packing.pdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackingService", "PackingService\PackingService.csproj", "{7F357429-AB43-46CD-A22F-8C026061F7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "packingConsole", "packingConsole\packingConsole.csproj", "{F304B757-44AC-442D-9EEE-1FC52E769CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webServiceTester", "webServiceTester\webServiceTester.csproj", "{2BEF96DF-2BC9-40A8-ACDE-0E03518FE229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTester", "ConsoleTester\ConsoleTester.csproj", "{2BED0D07-F2F7-419E-9737-F37D81AF9918}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7F357429-AB43-46CD-A22F-8C026061F7E4} = {7F357429-AB43-46CD-A22F-8C026061F7E4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinglePack", "3DSingleBinPackFixedOrientation\SinglePack.csproj", "{04551041-5CA8-45DE-BA90-07C2A7686F0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{94AC850B-E361-4463-9A4E-37A7893DED12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "DataTypes\DataTypes.csproj", "{A2F53766-43F2-4EF0-A905-1DA17A565BE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetic", "GeneticAlgorithmOfPack\Genetic.csproj", "{922C7CE6-AA1D-4C4C-9621-CB1C64C0DD99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{F8F410A9-9B2F-47B5-A290-FE0623A755EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{3E27E7A0-BA9F-45E4-9EA4-D35B997ECAB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F357429-AB43-46CD-A22F-8C026061F7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F357429-AB43-46CD-A22F-8C026061F7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F357429-AB43-46CD-A22F-8C026061F7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F357429-AB43-46CD-A22F-8C026061F7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F304B757-44AC-442D-9EEE-1FC52E769CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F304B757-44AC-442D-9EEE-1FC52E769CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F304B757-44AC-442D-9EEE-1FC52E769CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F304B757-44AC-442D-9EEE-1FC52E769CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BEF96DF-2BC9-40A8-ACDE-0E03518FE229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEF96DF-2BC9-40A8-ACDE-0E03518FE229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEF96DF-2BC9-40A8-ACDE-0E03518FE229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEF96DF-2BC9-40A8-ACDE-0E03518FE229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BED0D07-F2F7-419E-9737-F37D81AF9918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BED0D07-F2F7-419E-9737-F37D81AF9918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BED0D07-F2F7-419E-9737-F37D81AF9918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BED0D07-F2F7-419E-9737-F37D81AF9918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04551041-5CA8-45DE-BA90-07C2A7686F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04551041-5CA8-45DE-BA90-07C2A7686F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04551041-5CA8-45DE-BA90-07C2A7686F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04551041-5CA8-45DE-BA90-07C2A7686F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AC850B-E361-4463-9A4E-37A7893DED12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AC850B-E361-4463-9A4E-37A7893DED12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AC850B-E361-4463-9A4E-37A7893DED12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AC850B-E361-4463-9A4E-37A7893DED12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2F53766-43F2-4EF0-A905-1DA17A565BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F53766-43F2-4EF0-A905-1DA17A565BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F53766-43F2-4EF0-A905-1DA17A565BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F53766-43F2-4EF0-A905-1DA17A565BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922C7CE6-AA1D-4C4C-9621-CB1C64C0DD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922C7CE6-AA1D-4C4C-9621-CB1C64C0DD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922C7CE6-AA1D-4C4C-9621-CB1C64C0DD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922C7CE6-AA1D-4C4C-9621-CB1C64C0DD99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F410A9-9B2F-47B5-A290-FE0623A755EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F410A9-9B2F-47B5-A290-FE0623A755EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F410A9-9B2F-47B5-A290-FE0623A755EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F410A9-9B2F-47B5-A290-FE0623A755EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E27E7A0-BA9F-45E4-9EA4-D35B997ECAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E27E7A0-BA9F-45E4-9EA4-D35B997ECAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E27E7A0-BA9F-45E4-9EA4-D35B997ECAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E27E7A0-BA9F-45E4-9EA4-D35B997ECAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F357429-AB43-46CD-A22F-8C026061F7E4} = {C55C310A-2896-4D02-8F16-0044FB7FB852}
+		{2BEF96DF-2BC9-40A8-ACDE-0E03518FE229} = {C55C310A-2896-4D02-8F16-0044FB7FB852}
+		{2BED0D07-F2F7-419E-9737-F37D81AF9918} = {C55C310A-2896-4D02-8F16-0044FB7FB852}
+		{04551041-5CA8-45DE-BA90-07C2A7686F0C} = {6BA2837C-182D-4126-8000-BC2C34D51990}
+		{94AC850B-E361-4463-9A4E-37A7893DED12} = {6BA2837C-182D-4126-8000-BC2C34D51990}
+		{A2F53766-43F2-4EF0-A905-1DA17A565BE8} = {6BA2837C-182D-4126-8000-BC2C34D51990}
+		{922C7CE6-AA1D-4C4C-9621-CB1C64C0DD99} = {6BA2837C-182D-4126-8000-BC2C34D51990}
+		{F8F410A9-9B2F-47B5-A290-FE0623A755EE} = {6BA2837C-182D-4126-8000-BC2C34D51990}
+		{F304B757-44AC-442D-9EEE-1FC52E769CF6} = {321FE38B-65EE-40E4-ACEA-F7EF3D7C20CC}
+		{3E27E7A0-BA9F-45E4-9EA4-D35B997ECAB7} = {B840DA20-5A7B-4190-9F9B-4B971424DC93}
+	EndGlobalSection
+EndGlobal

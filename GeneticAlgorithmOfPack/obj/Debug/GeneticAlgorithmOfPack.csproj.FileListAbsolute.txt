@@ -1,0 +1,11 @@
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\obj\Debug\ResolveAssemblyReference.cache
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\GeneticAlgorithmOfPack.dll
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\GeneticAlgorithmOfPack.pdb
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\3DSingleBinPackFixedOrientation.dll
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\DataTypes.dll
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\Logger.dll
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\3DSingleBinPackFixedOrientation.pdb
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\DataTypes.pdb
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\bin\Debug\Logger.pdb
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\obj\Debug\GeneticAlgorithmOfPack.dll
+D:\projects\ThreeDimensionalBinTimePacking\GeneticAlgorithmOfPack\obj\Debug\GeneticAlgorithmOfPack.pdb

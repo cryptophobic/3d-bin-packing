@@ -1,0 +1,734 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Controller</name>
+    </assembly>
+    <members>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence">
+            <summary>
+            calculating boxes/containers consistence
+            </summary>
+            <remarks>	
+            calculating consistence boxes to containers due to sizes or weight, 
+            also calculating limits of containers for solution searching
+            </remarks>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.containers">
+            <summary>
+            containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.boxes">
+            <summary>
+            boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.boxesVolume">
+            <summary>
+            boxes volume
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.boxesWeight">
+            <summary>
+            boxes weight
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.notConsistentContainers">
+            <summary>
+            removed containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.notConsistentBoxes">
+            <summary>
+            removed boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.containersLimit">
+            <summary>
+            collection with limits of containers
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.#ctor(ThreeDimensionalBinTimePacking.DataTypes.Container[],ThreeDimensionalBinTimePacking.DataTypes.Product[])">
+            <summary>
+            check consistence boxes to containers
+            </summary>
+            <param name="newContainers">containers</param>
+            <param name="newBoxes">boxes</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.containersBoxesConsistence">
+            <summary>
+            check consistence boxes to containers
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.Containers">
+            <summary>
+            accessor for containers
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.ContainersCount">
+            <summary>
+            accessor for containers count
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.RemovedContainers">
+            <summary>
+            accessor for removed containers
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.RemovedContainersCount">
+            <summary>
+            accessor for removed containers count
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.Boxes">
+            <summary>
+            accessor for boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.BoxesCount">
+            <summary>
+            accessor for boxes count
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.RemovedBoxes">
+            <summary>
+            accessor for removed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.RemovedBoxesCount">
+            <summary>
+            accessor for removed boxes count
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.BoxesVolume">
+            <summary>
+            boxes volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.BoxesWeight">
+            <summary>
+            boxes weight
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersBoxesConsistence.ContainersLimit">
+            <summary>
+            accessor for containers limit
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.TreeItem">
+            <summary>
+            class for storing filled container (caching it for next solutions)
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.TreeItem.container">
+            <summary>
+            filled container in current level
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.TreeItem.leaves">
+            <summary>
+            pointer to leaves
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.TreeItem.node">
+            <summary>
+            pointer to node
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.TreeItem.next">
+            <summary>
+            pointer to next leaf
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.TreeItem.FreeVolume">
+            <summary>
+            FreeVolume
+            </summary>
+            <value>free volume in container</value>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.TreeItem.Level">
+            <summary>
+            level
+            </summary>
+            <value>level in tree</value>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.Tree">
+            <summary>
+            class which stores filled containers in order of possible filling
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Tree.globalNode">
+            <summary>
+            node of tree
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Tree.logger">
+            <summary>
+            logger
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Tree.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Tree.addAfter(ThreeDimensionalBinTimePacking.Controller.TreeItem,ThreeDimensionalBinTimePacking.Controller.TreeItem)">
+            <summary>
+            add as next leaf
+            </summary>
+            <param name="item">item after that will be previous</param>
+            <param name="newItem">new item</param>
+            <returns>new itemm</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Tree.addNew(ThreeDimensionalBinTimePacking.Controller.TreeItem,ThreeDimensionalBinTimePacking.Controller.TreeItem)">
+            <summary>
+            add new item
+            </summary>
+            <param name="node">node for bew item</param>
+            <param name="newItem">new item</param>
+            <returns>added item</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Tree.delete(ThreeDimensionalBinTimePacking.Controller.TreeItem)">
+            <summary>
+            delete item from tree
+            </summary>
+            <param name="delItem">item to delete</param>
+            <returns>deleted item</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Tree.GlobalNode">
+            <summary>
+            GlobalNode (Accessor)
+            </summary>
+            <value>node of tree</value>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.Packer">
+            <summary>
+            Pack boxes from boxes set into containers from container set
+            </summary>
+            <remarks>
+            This class uses Genetic class for packing boxes in containers.
+            It also stores solutions in a cache to speed up calculation of next solutions
+            </remarks>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Packer.logger">
+            <summary>
+            pointer to Logger class
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Packer.cache">
+            <summary>
+            cache of solutions
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Packer.containersVolume">
+            <summary>
+            volume of containers in container set
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Packer.boxesVolume">
+            <summary>
+            volume of boxes in boxes set
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Packer.containersSet">
+            <summary>
+            containers set
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Packer.productsSet">
+            <summary>
+            boxes set
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Packer.#ctor">
+            <summary>
+            public constructor. performs all necessary initializations. 
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Packer.createNodes(ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet[])">
+            <summary>
+            create nodes for first solutions without boxes, just adding new containers
+            </summary>
+            <param name="containersSet">containers set</param>
+            <returns>count of containers (I can't remember, why :) )</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Packer.tryToPack(ThreeDimensionalBinTimePacking.DataTypes.Container,ThreeDimensionalBinTimePacking.DataTypes.Product[],ThreeDimensionalBinTimePacking.Controller.TreeItem)">
+            <summary>
+            trying to pack boxes in specified container, result storing also to treeitem for caching
+            </summary>
+            <param name="container">container</param>
+            <param name="products">boxes</param>
+            <param name="item">empty treeitem</param>
+            <returns>container, full of boxes</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Packer.go(ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet[],ThreeDimensionalBinTimePacking.DataTypes.Product[],ThreeDimensionalBinTimePacking.Controller.TreeItem,ThreeDimensionalBinTimePacking.Controller.FilledContainersSet)">
+            <summary>
+            calling method this.tryToPack in a different combinations with a recursive logic until nice solution found
+            </summary>
+            <param name="tempSet">containers set</param>
+            <param name="tempProds">boxes set</param>
+            <param name="node">node of caching tree</param>
+            <param name="filledContainersSet">array of filled containers</param>
+            <returns>array of filled containers</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Packer.pack(ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet[],ThreeDimensionalBinTimePacking.DataTypes.Product[])">
+            <summary>
+            make all initialisations for tree and filled containers set and calls method this.go
+            </summary>
+            <param name="newContainersSet">containers set</param>
+            <param name="newProducts">boxes set</param>
+            <returns>array of filled containers</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Packer.ContainersSet">
+            <summary>
+            Containers Set
+            </summary>
+            <value>accessor and mutator for containers set</value>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Packer.Products">
+            <summary>
+            Boxes Set
+            </summary>
+            <value>accessor and mutator for boxes set</value>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Packer.ContainersVolume">
+            <summary>
+            accessor for containers in containers set
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Packer.BoxesVolume">
+            <summary>
+            accessor for boxes in boxes set
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Packer.FreeVolume">
+            <summary>
+            current free volume in containers
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.BoxesStorage">
+            <summary>
+            boxes storage, calculatings
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.boxes">
+            <summary>
+            array of boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.boxesVolume">
+            <summary>
+            boxes volume
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.boxesWeight">
+            <summary>
+            boxes weight
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.logger">
+            <summary>
+            pointer to Logger
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.#ctor(ThreeDimensionalBinTimePacking.DataTypes.Product[])">
+            <summary>
+            public constructor
+            </summary>
+            <param name="newBoxes">boxes for store</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.calculateBoxes">
+            <summary>
+            calculate boxes weights and volumes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.BoxesWeight">
+            <summary>
+            boxes weight
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.BoxesVolume">
+            <summary>
+            boxes volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.Boxes">
+            <summary>
+            boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.BoxesStorage.Count">
+            <summary>
+            boxescount
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.ContainersStorage">
+            <summary>
+            class which store containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersStorage.containers">
+            <summary>
+            containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersStorage.logger">
+            <summary>
+            pointer to Logger object
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersStorage.#ctor(ThreeDimensionalBinTimePacking.DataTypes.Container[])">
+            <summary>
+            public constructor
+            </summary>
+            <param name="newContainers">containers</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersStorage.sortContainers">
+            <summary>
+            sorting containers in order of volumes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.ContainersStorage.Containers">
+            <summary>
+            accessor for containeers
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.Controller">
+            <summary>
+            class for managing containers and boxes
+            </summary>
+            <remarks>it takes containers and boxes and try to find best solution for them</remarks>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Controller.containersStorage">
+            <summary>
+            pointer to ContainersStorage class
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Controller.boxesFactory">
+            <summary>
+            pointer to BoxesStorage class
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Controller.consistence">
+            <summary>
+            pointer to ContainersBoxesConsistence class
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Controller.solution">
+            <summary>
+            pointeer to Solution class
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Controller.logger">
+            <summary>
+            pointer to Logger class
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Controller.#ctor(ThreeDimensionalBinTimePacking.DataTypes.Container[],ThreeDimensionalBinTimePacking.DataTypes.Product[])">
+            <summary>
+            public constructor
+            </summary>
+            <param name="newContainers">containers set</param>
+            <param name="newProducts">boxes</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Controller.getSolution">
+            <summary>
+            calling containersScheduler and packer methods to find solution
+            </summary>
+            <returns>pointer to Solution object</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Controller.ProductsCount">
+            <summary>
+            accessor for boxes count
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Controller.ProductsVolume">
+            <summary>
+            accessor for boxes volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Controller.ProductsWeight">
+            <summary>
+            accessor for boxes weight
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet">
+            <summary>
+            class wich stores parameters of container and count of containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet.count">
+            <summary>
+            count of countainers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet.container">
+            <summary>
+            container
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet.ToString">
+            <summary>
+            overrided method ToString
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet.Count">
+            <summary>
+            mutator and accessor for count of countainers
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.GroupedContainersSet.Container">
+            <summary>
+            mutator and accessor for container
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.ContainersSet">
+            <summary>
+            containers set
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.Solution">
+            <summary>
+            Total solution 
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Solution.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Solution.removedContainers">
+            <summary>
+            removed containers due to sizes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Solution.removedBoxes">
+            <summary>
+            removed boxes due to sizes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.Solution.containers">
+            <summary>
+            filled containers
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.Solution.ToString">
+            <summary>
+            overrided method ToString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Solution.FreeVolume">
+            <summary>
+            free volume in containers
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Solution.PackedVolume">
+            <summary>
+            total packed volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Solution.ContainersVolume">
+            <summary>
+            total containers volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Solution.ContainersCount">
+            <summary>
+            containers count
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Solution.RemovedContainers">
+            <summary>
+            acessor and mutator for removed containers due to sizes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Solution.RemovedBoxes">
+            <summary>
+            acessor and mutator for removed boxes due to sizes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.Solution.Containers">
+            <summary>
+            acessor and mutator for filled containers
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet">
+            <summary>
+            class for storing filled containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.packedVolume">
+            <summary>
+            packed volume
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.freeVolume">
+            <summary>
+            free volume
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.volume">
+            <summary>
+            packed volume
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.packedCount">
+            <summary>
+            count of packed boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.last">
+            <summary>
+            last index in set
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.#ctor(System.Int32)">
+            <summary>
+            public constructor
+            </summary>
+            <param name="count">size of set</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.calculateTotals">
+            <summary>
+            calculate volumes, counts
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.addContainer(ThreeDimensionalBinTimePacking.DataTypes.FilledContainer)">
+            <summary>
+            add container to set
+            </summary>
+            <param name="container">filled container</param>
+            <returns>index of container in set</returns>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.containers">
+            <summary>
+            containers
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.copy">
+            <summary>
+            copy of object
+            </summary>
+            <returns>new copy of this object</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.Size">
+            <summary>
+            size of set
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.Count">
+            <summary>
+            count of items in set
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.PackedCount">
+            <summary>
+            accessor for count of packeed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.PackedVolume">
+            <summary>
+            accessor for total volume of packed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.Volume">
+            <summary>
+            accessor for total volume of containers
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.FreeVolume">
+            <summary>
+            accessor for free volume in containers
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Controller.FilledContainersSet.Containers">
+            <summary>
+            mutator and accessor for containers
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler">
+            <summary>
+            class for calculating all possible sets of containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.weight">
+            <summary>
+            weight restriction for containers set
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.volume">
+            <summary>
+            volume restriction for containers set
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.containersLimit">
+            <summary>
+            count of containers restriction for containers set
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.containers">
+            <summary>
+            all possible containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.boxesCount">
+            <summary>
+            count of boxes (mmm, looks like one more restriction, maybe ;) )
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.maxContainersVolume">
+            <summary>
+            last found max volume of containers (restriction to next searchs of solution)
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.logger">
+            <summary>
+            pointer to Logger
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.potentialSolutions">
+            <summary>
+            array ffor storing possible sollutions
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.currSolution">
+            <summary>
+            index of current solution in array
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.#ctor(System.Int64,System.Int64,System.Collections.Generic.Dictionary{System.Int32,System.Int32},ThreeDimensionalBinTimePacking.DataTypes.Container[],System.Int32)">
+            <summary>
+            public constructor
+            </summary>
+            <param name="newWeight">weight restriction</param>
+            <param name="newVolume">volume restriction</param>
+            <param name="newContainersLimit">container's count restriction</param>
+            <param name="newContainers">containers set</param>
+            <param name="newBoxesCount">boxes count</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.sortSolutions">
+            <summary>
+            sorting solutions in order by cheapness
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.getNextSolution">
+            <summary>
+            get next solution
+            </summary>
+            <returns>next solution or null (must be impossible condition for returning null according to my tests)</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Controller.ContainersScheduler.getContainersSet(System.Int64,System.Double,System.Int32,System.Collections.Generic.Dictionary{System.Int32,System.Int32},System.Int32)">
+            <summary>
+            recursive method calculate solutions
+            </summary>
+            <param name="remainingVolume">current volume restriction</param>
+            <param name="remainingWeight">current weight restriction</param>
+            <param name="containerNumber">number of current container (we investigate it for capability)</param>
+            <param name="containersSet">containers set</param>
+            <param name="containersCount">containers count (one more restriction count of containers must be less or equal to count of boxes)</param>
+            <returns>set of posssible solutions</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>3DSingleBinPackFixedOrientation</name>
+    </assembly>
+    <members>
+        <member name="T:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer">
+            <summary>
+            class which works with container
+            </summary>
+            <remarks>
+            I mean that this class works with one container, pack boxes to container, check consistence box to container, 
+            calculates weihts and volumes of container and packed boxes 
+            </remarks>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.packedVolume">
+            <summary>
+            packed volume
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.packedWeight">
+            <summary>
+            packed weight
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.minNotPackedVolume">
+            <summary>
+            volume of smalles not packed box
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.height">
+            <summary>
+            height of packed boxes from bottom of container to top of the top box
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.packed">
+            <summary>
+            collection of packed boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.notPacked">
+            <summary>
+            collection of not packed boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.p">
+            <summary>
+            collection of points to put new box
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.#ctor(ThreeDimensionalBinTimePacking.DataTypes.Size,System.Int64)">
+            <summary>
+            public constructor of ProcessContainer
+            </summary>
+            <param name="newSize">size of container</param>
+            <param name="newWeight">weight condition of container</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.possibleToPut(ThreeDimensionalBinTimePacking.DataTypes.Size,ThreeDimensionalBinTimePacking.DataTypes.Axis,ThreeDimensionalBinTimePacking.DataTypes.Pack)">
+            <summary>
+            check if possible to put box to specified dot in container
+            </summary>
+            <param name="boxSize">size of the box to insert</param>
+            <param name="dot">dot for inserting box to</param>
+            <param name="box">box with dot</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.evaluateState1">
+            <summary>
+            function which evaluates state of packing
+            </summary>
+            <returns>if remaining volume less that minimal volume of not packed boxes returns true
+            else if each of convex hulls less that minimal volume of not packed boxes returns true
+            else return false</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.outputSolution">
+            <summary>
+            output solution to the log file
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.outputAll">
+            <summary>
+            output state of packing to the log file
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.addBoxExtremes(System.Int32,ThreeDimensionalBinTimePacking.DataTypes.Axis,ThreeDimensionalBinTimePacking.DataTypes.Size)">
+            <summary>
+            add extreme points of packed box
+            </summary>
+            <param name="boxNumber">box number</param>
+            <param name="axis">position of box in container</param>
+            <param name="size">size of box</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.insertBox(System.Int32,ThreeDimensionalBinTimePacking.DataTypes.Product,ThreeDimensionalBinTimePacking.DataTypes.Size)">
+            <summary>
+            tries to insert box to container
+            </summary>
+            <param name="boxNumber">box number</param>
+            <param name="newBox">box</param>
+            <param name="boxSize">box size</param>
+            <returns></returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.PackedWeight">
+            <summary>
+            packed weight
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.PackedVolume">
+            <summary>
+            packed volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.RemainingVolume">
+            <summary>
+            free volume in container
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.Packed">
+            <summary>
+            collection of packed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.PackedCount">
+            <summary>
+            count of packed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.NotPacked">
+            <summary>
+            collection of not packed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.ProcessContainer.NotPackedCount">
+            <summary>
+            count of not packed boxes
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.SinglePack.List">
+            <summary>
+            class for storing ordered collection of xs, ys and zs of extreme points
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.List.listY">
+            <summary>
+            pointer to ListHigh
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.List.listX">
+            <summary>
+            pointer to ListMiddle
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.List.listZ">
+            <summary>
+            pointer to ListBottom
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.List.first">
+            <summary>
+            pointer to first element
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.List.current">
+            <summary>
+            pointer to current element
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.add(System.Int32,ThreeDimensionalBinTimePacking.DataTypes.Axis)">
+            <summary>
+            adding element to list
+            </summary>
+            <param name="boxNumber">box number</param>
+            <param name="dot">coordinates</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.remove(ThreeDimensionalBinTimePacking.DataTypes.Axis)">
+            <summary>
+            remove extreme point
+            </summary>
+            <param name="dot">coordinates of point</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.getNext(System.Boolean)">
+            <summary>
+            get next element
+            </summary>
+            <param name="getFirst">if true, that get first and current will be first</param>
+            <returns>pointer to "next" ExtremePoint object</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.getNext(System.Int32)">
+            <summary>
+            get next element in specified level (top, middle, bottom)
+            </summary>
+            <param name="level">level top=1, middle=2, bottom=3</param>
+            <returns>pointer to ExtremePoint object</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.reset">
+            <summary>
+            sets current to first
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.getNext">
+            <summary>
+            get next element after current
+            </summary>
+            <returns>pointer to the "next" ExtremePoint object</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.SinglePack.List.getFirst">
+            <summary>
+            first element
+            </summary>
+            <returns>pointer to the first ExtremePoint object</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.SinglePack.List.Current">
+            <summary>
+            current extreme point
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.SinglePack.List.ListHigh">
+            <summary>
+            class which stores ys
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.SinglePack.List.ListMiddle">
+            <summary>
+            class which stores xs
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.SinglePack.List.ListBottom">
+            <summary>
+            class which stores zs
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.SinglePack.ExtremePoint">
+            <summary>
+            class which stores extreme points (points to put next box)
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ExtremePoint.box">
+            <summary>
+            box
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.ExtremePoint.dot">
+            <summary>
+            coordinates of box
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.SinglePack.Relation">
+            <summary>
+            box relation
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.Relation.front">
+            <summary>
+            in front of
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.Relation.right">
+            <summary>
+            in right from
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.SinglePack.Relation.top">
+            <summary>
+            on the top of
+            </summary>
+        </member>
+    </members>
+</doc>

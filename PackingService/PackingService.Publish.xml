@@ -1,0 +1,19 @@
+<publishData>
+  <publishTarget publishUrl="D:\projects\bin\pub\">
+    <file relUrl="bin/Controller.dll" publishTime="04/28/2010 19:48:06" />
+    <file relUrl="bin/GeneticAlgorithmOfPack.pdb" publishTime="04/28/2010 19:47:45" />
+    <file relUrl="bin/ThreeDimensionalBinTimePacking.dll" publishTime="04/22/2010 14:42:03" />
+    <file relUrl="bin/PackingService.pdb" publishTime="04/28/2010 19:48:32" />
+    <file relUrl="Web.config" publishTime="04/28/2010 14:19:04" />
+    <file relUrl="bin/Logger.dll" publishTime="04/28/2010 19:48:08" />
+    <file relUrl="bin/Controller.pdb" publishTime="04/28/2010 19:48:06" />
+    <file relUrl="bin/GeneticAlgorithmOfPack.dll" publishTime="04/28/2010 19:47:45" />
+    <file relUrl="bin/DataTypes.pdb" publishTime="04/28/2010 19:48:07" />
+    <file relUrl="bin/3DSingleBinPackFixedOrientation.pdb" publishTime="04/28/2010 19:47:06" />
+    <file relUrl="bin/Logger.pdb" publishTime="04/28/2010 19:48:08" />
+    <file relUrl="bin/DataTypes.dll" publishTime="04/28/2010 19:48:07" />
+    <file relUrl="bin/PackingService.dll" publishTime="04/28/2010 19:48:32" />
+    <file relUrl="Service1.asmx" publishTime="04/12/2010 14:55:56" />
+    <file relUrl="bin/3DSingleBinPackFixedOrientation.dll" publishTime="04/28/2010 19:47:06" />
+  </publishTarget>
+</publishData>

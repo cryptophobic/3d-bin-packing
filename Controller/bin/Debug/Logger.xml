@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Logger</name>
+    </assembly>
+    <members>
+        <member name="T:BinTime.Logger.Logger">
+            <summary>
+            class for logging
+            </summary>
+        </member>
+        <member name="F:BinTime.Logger.Logger.GENERAL">
+            <summary>
+            const for general logs
+            </summary>
+        </member>
+        <member name="F:BinTime.Logger.Logger.ERROR">
+            <summary>
+            const for error logs
+            </summary>
+        </member>
+        <member name="F:BinTime.Logger.Logger.LogPath">
+            <summary>
+            path of logfile
+            </summary>
+        </member>
+        <member name="F:BinTime.Logger.Logger.ErrorPath">
+            <summary>
+            path of logfile for errors
+            </summary>
+        </member>
+        <member name="M:BinTime.Logger.Logger.#ctor(System.String,System.String)">
+            <summary>
+            public constructor
+            </summary>
+            <param name="LogFile">path to logfile</param>
+            <param name="ErrorFile">path to logfile of errors</param>
+        </member>
+        <member name="M:BinTime.Logger.Logger.#ctor(System.String)">
+            <summary>
+            public constructor
+            </summary>
+            <param name="LogFile">path to logfile</param>
+        </member>
+        <member name="M:BinTime.Logger.Logger.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="M:BinTime.Logger.Logger.Append(System.String)">
+            <summary>
+            add new string to logfile
+            </summary>
+            <param name="str">string</param>
+        </member>
+        <member name="M:BinTime.Logger.Logger.clear">
+            <summary>
+            clear logfile
+            </summary>
+        </member>
+        <member name="M:BinTime.Logger.Logger.Append(System.String,System.Byte)">
+            <summary>
+            add new string to logfile
+            </summary>
+            <param name="str">string</param>
+            <param name="mode">error or general</param>
+        </member>
+    </members>
+</doc>

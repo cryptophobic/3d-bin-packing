@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GeneticAlgorithmOfPack</name>
+    </assembly>
+    <members>
+        <member name="T:ThreeDimensionalBinTimePacking.Genetic.Chromosome">
+            <summary>
+            store info about chromosome
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Chromosome.orientation">
+            <summary>
+            orientaions of boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Chromosome.parallels">
+            <summary>
+            relations of orientaions to parallels
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Chromosome.translation">
+            <summary>
+            translation box number to box
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Chromosome.logger">
+            <summary>
+            pointer to Logger
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Chromosome.#ctor(System.Collections.Generic.Dictionary{System.Int32,ThreeDimensionalBinTimePacking.DataTypes.Product},System.Random)">
+            <summary>
+            public constructor
+            </summary>
+            <param name="boxes">boxes</param>
+            <param name="r">pointer to Random object</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Chromosome.getOrientation(System.Int32)">
+            <summary>
+            get orientation by boxnumber
+            </summary>
+            <param name="boxNumber">box number</param>
+            <returns>orientation number</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Chromosome.setOrientation(System.Int32,System.Int32)">
+            <summary>
+            set orientation to box
+            </summary>
+            <param name="boxNumber">box number</param>
+            <param name="orient">orientation number</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Chromosome.getTransSize(ThreeDimensionalBinTimePacking.DataTypes.Size,System.Int32)">
+            <summary>
+            get size for rotated box
+            </summary>
+            <param name="originalSize">original size</param>
+            <param name="box">box number</param>
+            <returns>translated size</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Genetic.Chromosome.Count">
+            <summary>
+            count of genes
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Genetic.Chromosome.Parallel">
+            <summary>
+            relation orientation to parallels 
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.Genetic.Genetic">
+            <summary>
+            implements genetic algorith of 3d bin packing task with variable orientations and 1 container
+            </summary>
+            <remarks>
+            If one box have a six orientaions n=6 and we have m boxes, so gene is pair of i:j where i is a random number 
+            from 1 to n, j is a number from 1 to m and we have m genes in 1 chromosome. 
+            All chromosomes differs from each other just by orientations of boxes (i)
+            </remarks>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.bioMass">
+            <summary>
+            set of boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.generationsCount">
+            <summary>
+            count of generations
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.generationNumber">
+            <summary>
+            bumber of current generation
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.population">
+            <summary>
+            count of chromosomes in 1 generation
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.Chromosomes">
+            <summary>
+            chromosomes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.logger">
+            <summary>
+            pointer to Logger
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.Generation">
+            <summary>
+            current generation (set of filled containers)
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.container">
+            <summary>
+            pointer to (filled) container 
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.threading">
+            <summary>
+            flag to turn to off/on threading (not tested properly, sorry :( )
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.terminated">
+            <summary>
+            count of population which must be killed in next generation
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.isBest">
+            <summary>
+            flag to determine if we found nice solution
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.r">
+            <summary>
+            pointer to Random object
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.bestSolution">
+            <summary>
+            best filled container in all generations
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.Genetic.Genetic.bestChromosome">
+            <summary>
+            best chromosome of all generations
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.#ctor(ThreeDimensionalBinTimePacking.DataTypes.Product[],ThreeDimensionalBinTimePacking.DataTypes.Container)">
+            <summary>
+            public constructor
+            </summary>
+            <param name="boxes">boxes set</param>
+            <param name="newContainer">container</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.#ctor(System.Collections.Generic.Dictionary{System.Int32,ThreeDimensionalBinTimePacking.DataTypes.Product},ThreeDimensionalBinTimePacking.DataTypes.Container)">
+            <summary>
+            public constructor, we have 2 constructors for testings ;)
+            please use one or another, it both works, nice. Almost :)
+            </summary>
+            <param name="boxes">boxes set</param>
+            <param name="newContainer">container</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.makeGeneration">
+            <summary>
+            make all crossovers, mutations and murders to create new generation (we need only pure Aryans ;) )
+            </summary>
+            <returns>set of chromosomes as new generation</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.mutation(ThreeDimensionalBinTimePacking.Genetic.Chromosome)">
+            <summary>
+            There are two kinds of mutation here: sequence mutation and position mutation. 
+            Sequence mutation selects two bits in a chromosome and switch them to form a new one. 
+            For position mutation, several bits are picked in the chromosome and are rotated into new random positions. 
+            Choosing kind of mutation for chromosome by random factor
+            </summary>
+            <param name="A">Current chromosome</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.crossover(ThreeDimensionalBinTimePacking.Genetic.Chromosome,ThreeDimensionalBinTimePacking.Genetic.Chromosome)">
+            <summary>
+            The crossover is one-point crossover, a random location is selected for two parents and the two parts 
+            after the crossover point of the two parents are switched over to form two children.
+            </summary>
+            <param name="A">Chromosome A</param>
+            <param name="B">Chromosome B</param>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.getGeneration(System.Int32)">
+            <summary>
+            get new generation
+            </summary>
+            <param name="maxPopulation">population</param>
+            <returns>set of chromosomes</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.getGeneration">
+            <summary>
+            get generation
+            </summary>
+            <returns>set of chromosomes</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.evolution">
+            <summary>
+            for all chromosomes try to implement algorithm of packing in container
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.evaluateSolutions">
+            <summary>
+            evaluate solutions. Find the best solution, sorting solutions etc
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.Genetic.Genetic.go(System.Object)">
+            <summary>
+            packing each chromosome
+            </summary>
+            <param name="index">index of chromosome</param>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Genetic.Genetic.IsBestExceed">
+            <summary>
+            method to check if we already have nice solution
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Genetic.Genetic.GenerationCount">
+            <summary>
+            count of generations for found solution
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Genetic.Genetic.Population">
+            <summary>
+            count of population
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Genetic.Genetic.BestSolution">
+            <summary>
+            best solution in all generations
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.Genetic.Genetic.BestChromosome">
+            <summary>
+            best chromosome of all generations
+            </summary>
+        </member>
+    </members>
+</doc>

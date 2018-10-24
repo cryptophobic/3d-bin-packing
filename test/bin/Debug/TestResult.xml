@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\projects\bin\ThreeDimensionalBinTimePacking(Structured)\test\bin\Debug\test.dll" total="10" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2010-04-29" time="01:48:40">
+  <environment nunit-version="2.5.3.9345" clr-version="2.0.50727.3603" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="D:\projects\bin\ThreeDimensionalBinTimePacking(Structured)\test\bin\Debug" machine-name="PRIVE-FCB9FECE7" user="UserXP" user-domain="PRIVE-FCB9FECE7" />
+  <culture-info current-culture="ru-RU" current-uiculture="ru-RU" />
+  <test-suite name="D:\projects\bin\ThreeDimensionalBinTimePacking(Structured)\test\bin\Debug\test.dll" executed="True" success="True" time="1144.391" asserts="0">
+    <results>
+      <test-suite name="ThreeDimensionalBinTimePacking" executed="True" success="True" time="1144.375" asserts="0">
+        <results>
+          <test-suite name="Test" executed="True" success="True" time="1144.375" asserts="0">
+            <results>
+              <test-suite name="Algorithm" executed="True" success="True" time="0.047" asserts="0">
+                <results>
+                  <test-suite name="AlgorithmTesting" executed="True" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.Algorithm.AlgorithmTesting.listTest" executed="True" success="True" time="0.000" asserts="27" />
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.Algorithm.AlgorithmTesting.processContainer" executed="True" success="True" time="0.016" asserts="34" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite name="ContainersScchedulingTester" executed="True" success="True" time="559.359" asserts="0">
+                <results>
+                  <test-suite name="ContainersScchedulingTesting" executed="True" success="True" time="559.359" asserts="0">
+                    <results>
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.ContainersScchedulingTester.ContainersScchedulingTesting.schedulerMultipleRealTest" executed="True" success="True" time="527.594" asserts="1392" />
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.ContainersScchedulingTester.ContainersScchedulingTesting.schedulerSingleKnownTest" executed="True" success="True" time="31.672" asserts="10" />
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.ContainersScchedulingTester.ContainersScchedulingTesting.schedulerTestWithNullValues" executed="True" success="True" time="0.000" asserts="10" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite name="Data" executed="True" success="True" time="0.047" asserts="0">
+                <results>
+                  <test-suite name="DataTesting" executed="True" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.Data.DataTesting.filledContainerData" executed="True" success="True" time="0.000" asserts="5" />
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.Data.DataTesting.filledContainersData" executed="True" success="True" time="0.000" asserts="13" />
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.Data.DataTesting.solutionData" executed="True" success="True" time="0.000" asserts="31" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite name="GeneticTest" executed="True" success="True" time="0.656" asserts="0">
+                <results>
+                  <test-suite name="GeneticTesting" executed="True" success="True" time="0.656" asserts="0">
+                    <results>
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.GeneticTest.GeneticTesting.gen" executed="True" success="True" time="0.641" asserts="27" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite name="OverAll" executed="True" success="True" time="584.250" asserts="0">
+                <results>
+                  <test-suite name="OverAll" executed="True" success="True" time="584.219" asserts="0">
+                    <results>
+                      <test-case name="ThreeDimensionalBinTimePacking.Test.OverAll.OverAll.go" executed="True" success="True" time="584.219" asserts="463" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

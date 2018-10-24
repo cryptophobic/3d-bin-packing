@@ -1,0 +1,9 @@
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\obj\Debug\ResolveAssemblyReference.cache
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\bin\Debug\3DSingleBinPackFixedOrientation.dll
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\bin\Debug\3DSingleBinPackFixedOrientation.pdb
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\bin\Debug\DataTypes.dll
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\bin\Debug\Logger.dll
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\bin\Debug\DataTypes.pdb
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\bin\Debug\Logger.pdb
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\obj\Debug\3DSingleBinPackFixedOrientation.dll
+D:\projects\ThreeDimensionalBinTimePacking\3DSingleBinPackFixedOrientation\obj\Debug\3DSingleBinPackFixedOrientation.pdb

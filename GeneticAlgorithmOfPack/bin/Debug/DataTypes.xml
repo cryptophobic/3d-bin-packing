@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataTypes</name>
+    </assembly>
+    <members>
+        <member name="T:ThreeDimensionalBinTimePacking.DataTypes.BigAndHeavy">
+            <summary>
+            abstract class for sizeable and weightable products
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.BigAndHeavy.size">
+            <summary>
+            size
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.BigAndHeavy.weight">
+            <summary>
+            weight
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.BigAndHeavy.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.BigAndHeavy.Size">
+            <summary>
+            accessor and mutator of size
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.BigAndHeavy.Volume">
+            <summary>
+            accessor for volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.BigAndHeavy.Weight">
+            <summary>
+            accessor for weight
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer">
+            <summary>
+            class for storing container full of boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.container">
+            <summary>
+            container
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.packedVolume">
+            <summary>
+            packed voulme
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.freeVolume">
+            <summary>
+            free volume
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.products_arr">
+            <summary>
+            array of packed boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.products_col">
+            <summary>
+            collection of packed boxes
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.PackedCount">
+            <summary>
+            count of packeed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.PackedVolume">
+            <summary>
+            total packed volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.FreeVolume">
+            <summary>
+            free volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.Products_col">
+            <summary>
+            collection of packed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.Products">
+            <summary>
+            array of packed boxes
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.Volume">
+            <summary>
+            volume of container
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.Weight">
+            <summary>
+            weight of container
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.Size">
+            <summary>
+            size of container
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.FilledContainer.Container">
+            <summary>
+            container
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.DataTypes.Size">
+            <summary>
+            stores sizes of containers and boxes
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Size.width">
+            <summary>
+            width
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Size.depth">
+            <summary>
+            depth
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Size.height">
+            <summary>
+            height
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Size.volume">
+            <summary>
+            volume
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Size.ToString">
+            <summary>
+            overrided method ToString
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Size.Volume">
+            <summary>
+            accessor to volume
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Size.Width">
+            <summary>
+            acccessor to width
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Size.Height">
+            <summary>
+            accessor to height
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Size.Depth">
+            <summary>
+            accessor to depth
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.DataTypes.Axis">
+            <summary>
+            stores Axis of boxes and containers
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Axis.x">
+            <summary>
+            x
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Axis.y">
+            <summary>
+            y
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Axis.z">
+            <summary>
+            z
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Axis.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Axis.ToString">
+            <summary>
+            overrided method ToString
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Axis.X">
+            <summary>
+            accessor and mutator to X
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Axis.Y">
+            <summary>
+            accessor and mutator to Y
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Axis.Z">
+            <summary>
+            accessor and mutator to Z
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.DataTypes.Container">
+            <summary>
+            stores container parameters
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Container.logger">
+            <summary>
+            pointer to Logger
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Container.isFit(ThreeDimensionalBinTimePacking.DataTypes.Product)">
+            <summary>
+            is this container fits specified box
+            </summary>
+            <param name="box">specified box</param>
+            <returns>true/false fits or not</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Container.possibleToPut(ThreeDimensionalBinTimePacking.DataTypes.Size,ThreeDimensionalBinTimePacking.DataTypes.Axis)">
+            <summary>
+            is possible to put box with specified orientation to specified place
+            </summary>
+            <param name="boxSize">size</param>
+            <param name="dot">coordinates</param>
+            <returns>true/false possible or not</returns>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Container.ToString">
+            <summary>
+            overrided method ToString
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.DataTypes.Product">
+            <summary>
+            stores info about product
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Product.prodid">
+            <summary>
+            prod id
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Product.name">
+            <summary>
+            name
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Product.ToString">
+            <summary>
+            overrided method ToString
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Product.ProdId">
+            <summary>
+            accessor and mutator for prod id
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Product.Name">
+            <summary>
+            accessor and mutator for name
+            </summary>
+        </member>
+        <member name="T:ThreeDimensionalBinTimePacking.DataTypes.Pack">
+            <summary>
+            stores info about packed product
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Pack.product">
+            <summary>
+            product
+            </summary>
+        </member>
+        <member name="F:ThreeDimensionalBinTimePacking.DataTypes.Pack.axis">
+            <summary>
+            coordinates of place where it packed
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Pack.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="M:ThreeDimensionalBinTimePacking.DataTypes.Pack.ToString">
+            <summary>
+            overrided method ToString
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Pack.Size">
+            <summary>
+            size of product
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Pack.Volume">
+            <summary>
+            volume of product
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Pack.Weight">
+            <summary>
+            weight of product
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Pack.Name">
+            <summary>
+            name of product
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Pack.ProdId">
+            <summary>
+            prod id of product
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Pack.Product">
+            <summary>
+            accessor for product
+            </summary>
+        </member>
+        <member name="P:ThreeDimensionalBinTimePacking.DataTypes.Pack.Axis">
+            <summary>
+            accessor for coordinates of place where it packed
+            </summary>
+        </member>
+    </members>
+</doc>
